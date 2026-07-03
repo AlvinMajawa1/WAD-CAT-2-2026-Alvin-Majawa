@@ -17,6 +17,15 @@ const services = [
 	}
 ];
 
+const banner = document.getElementById("banner");
+const bio = document.getElementById("bio");
+
+if (banner && bio) {
+	banner.addEventListener("click", () => {
+		bio.classList.toggle("show");
+	});
+}
+
 const themeToggleButton = document.getElementById("theme-toggle");
 const savedTheme = localStorage.getItem("theme");
 

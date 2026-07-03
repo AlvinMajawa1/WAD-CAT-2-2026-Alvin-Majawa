@@ -22,3 +22,11 @@ Feature 4 - localStorage persistence:
 - Added a Dark Mode toggle button and saved theme preference using localStorage.setItem("theme", "dark"/"light").
 - On page load, the site reads localStorage.getItem("theme") and applies the saved theme automatically.
 - Added extra persistence by saving last contact name and email while typing, then restoring them on reload.
+
+Feature 5 - Banner click-to-reveal:
+- Added banner image id="banner" and hidden paragraph id="bio".
+- Set #bio to display:none initially and used a .show class with display:block.
+- Implemented banner click with classList.toggle("show") to reveal/hide the bio message.
+
+Dark mode refinements:
+- Improved dark mode styling for section-alt backgrounds and footer card contrast.
