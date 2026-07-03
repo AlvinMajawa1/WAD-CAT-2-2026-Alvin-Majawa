@@ -11,6 +11,7 @@
 	<header class="site-header" id="home">
 		<div class="container nav-wrap">
 			<h1 class="brand">Msika-Link</h1>
+			<button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark mode">🌙 Dark Mode</button>
 			<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open navigation menu">
 			<label for="menu-toggle" class="menu-btn" aria-label="Open menu">☰</label>
 			<label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
@@ -381,6 +382,14 @@
 			<p class="footer-copy">&copy; 2026 Msika-Link. All rights reserved.</p>
 		</div>
 	</footer>
+
+	<div id="success-modal" class="custom-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+		<div class="custom-modal-content">
+			<h3 id="modal-title">Submission Received</h3>
+			<p id="modal-message"></p>
+			<button id="close-modal-btn" class="btn" type="button">Close</button>
+		</div>
+	</div>
 	<script src="js/script.js"></script>
 </body>
 </html>

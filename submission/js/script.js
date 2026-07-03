@@ -17,6 +17,35 @@ const services = [
 	}
 ];
 
+const themeToggleButton = document.getElementById("theme-toggle");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+	document.body.classList.add("dark-theme");
+}
+
+if (themeToggleButton) {
+	const updateThemeButtonLabel = () => {
+		themeToggleButton.textContent = document.body.classList.contains("dark-theme")
+			? "☀️ Light Mode"
+			: "🌙 Dark Mode";
+	};
+
+	updateThemeButtonLabel();
+
+	themeToggleButton.addEventListener("click", () => {
+		document.body.classList.toggle("dark-theme");
+
+		if (document.body.classList.contains("dark-theme")) {
+			localStorage.setItem("theme", "dark");
+		} else {
+			localStorage.setItem("theme", "light");
+		}
+
+		updateThemeButtonLabel();
+	});
+}
+
 const servicesContainer = document.getElementById("services-list");
 
 if (servicesContainer) {
@@ -86,8 +115,49 @@ const contactForm = document.getElementById("contact-form");
 const nameField = document.getElementById("contact-name");
 const emailField = document.getElementById("contact-email");
 const formFeedback = document.getElementById("form-feedback");
+const successModal = document.getElementById("success-modal");
+const modalMessage = document.getElementById("modal-message");
+const closeModalButton = document.getElementById("close-modal-btn");
+
+const closeModal = () => {
+	if (successModal) {
+		successModal.classList.remove("show");
+		successModal.setAttribute("aria-hidden", "true");
+	}
+};
+
+if (closeModalButton) {
+	closeModalButton.addEventListener("click", closeModal);
+}
+
+if (successModal) {
+	successModal.addEventListener("click", (event) => {
+		if (event.target === successModal) {
+			closeModal();
+		}
+	});
+}
 
 if (contactForm && nameField && emailField && formFeedback) {
+	const savedName = localStorage.getItem("contactName");
+	const savedEmail = localStorage.getItem("contactEmail");
+
+	if (savedName) {
+		nameField.value = savedName;
+	}
+
+	if (savedEmail) {
+		emailField.value = savedEmail;
+	}
+
+	nameField.addEventListener("input", () => {
+		localStorage.setItem("contactName", nameField.value);
+	});
+
+	emailField.addEventListener("input", () => {
+		localStorage.setItem("contactEmail", emailField.value);
+	});
+
 	contactForm.addEventListener("submit", (event) => {
 		event.preventDefault();
 
@@ -107,8 +177,17 @@ if (contactForm && nameField && emailField && formFeedback) {
 			return;
 		}
 
-		formFeedback.textContent = `Thank you ${customerName}. We'll contact you shortly.`;
+		formFeedback.textContent = "";
 		formFeedback.style.color = "#166534";
+
+		if (successModal && modalMessage) {
+			modalMessage.textContent = `Thank you ${customerName}. We'll contact you shortly.`;
+			successModal.classList.add("show");
+			successModal.setAttribute("aria-hidden", "false");
+		}
+
+		localStorage.removeItem("contactName");
+		localStorage.removeItem("contactEmail");
 		contactForm.reset();
 	});
 }

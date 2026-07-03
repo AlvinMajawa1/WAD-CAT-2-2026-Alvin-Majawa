@@ -15,5 +15,10 @@ Feature 3 - Form validation:
 - Used event.preventDefault() on form submit to handle validation in JavaScript.
 - Read user input using .value from name and email fields.
 - Displayed dynamic feedback with textContent:
-	- Success: "Thank you [Name]. We'll contact you shortly."
+	- Success: shown in a custom popup modal as "Thank you [Name]. We'll contact you shortly."
 	- Invalid email: "Email is invalid."
+
+Feature 4 - localStorage persistence:
+- Added a Dark Mode toggle button and saved theme preference using localStorage.setItem("theme", "dark"/"light").
+- On page load, the site reads localStorage.getItem("theme") and applies the saved theme automatically.
+- Added extra persistence by saving last contact name and email while typing, then restoring them on reload.
