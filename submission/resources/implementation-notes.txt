@@ -1,0 +1,5 @@
+Feature 1 - Loop-rendered dynamic content:
+- Added a new "Vendor Services" section in index.html with an empty container: id="services-list".
+- Implemented JavaScript in js/script.js using an array of objects and forEach().
+- Each object includes a required "name" property and a "price" property.
+- Service cards are generated dynamically with createElement(), innerHTML, and appendChild().

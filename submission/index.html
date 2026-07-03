@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Msika-Link marketplace website connecting local buyers and sellers.">
+	<title>Msika-Link | Connect. Trade. Grow.</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="site-header" id="home">
+		<div class="container nav-wrap">
+			<h1 class="brand">Msika-Link</h1>
+			<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open navigation menu">
+			<label for="menu-toggle" class="menu-btn" aria-label="Open menu">☰</label>
+			<label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+			<nav class="site-nav" aria-label="Main navigation">
+				<div class="mobile-nav-top">
+					<h2>Menu</h2>
+					<label for="menu-toggle" class="menu-close" aria-label="Close menu">✕</label>
+				</div>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#categories">Categories</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#vendors">Vendors</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-grid">
+				<div class="hero-copy">
+					<h2>Your Local Marketplace, Digitally Connected</h2>
+					<p>
+						Msika-Link helps local traders showcase products, reach more customers, and grow their business.
+						From fresh produce to household essentials, everything is one click away.
+					</p>
+					<p>
+						Built for local markets, Msika-Link gives small businesses a stronger digital presence without expensive setup costs.
+						Buyers can discover nearby stalls faster, compare options, and contact vendors directly.
+					</p>
+					<ul class="hero-points">
+						<li>Easy product discovery for shoppers</li>
+						<li>Affordable online visibility for vendors</li>
+						<li>Direct communication via call or WhatsApp</li>
+					</ul>
+					<a class="btn" href="#contact">List Your Stall</a>
+				</div>
+				<div class="hero-image">
+					<img src="images/banner.png" alt="Busy local market scene showing fresh produce and traders at work">
+				</div>
+			</div>
+		</section>
+
+		<section class="section market-strip">
+			<div class="container strip-grid">
+				<img src="images/fruits.png" alt="Fresh fruit stall display at the market">
+				<img src="images/stall-fabrics.png" alt="Colorful fabric stall with local textiles">
+				<img src="images/stall-tech.png" alt="Small electronics and accessories on display">
+				<img src="images/stall-spices.png" alt="Traditional spices sold in local market containers">
+			</div>
+		</section>
+
+		<section id="about" class="section">
+			<div class="container split">
+				<article>
+					<h2>About Msika-Link</h2>
+					<p>
+						Msika-Link is a community-first platform made for local market vendors who want visibility online.
+						Our mission is to bridge traditional market trade with modern digital convenience.
+					</p>
+					<p>
+						Many local businesses sell high-quality products but struggle to be seen outside walk-in customers.
+						Msika-Link solves this by giving each vendor a digital storefront, product highlights, and contact visibility.
+					</p>
+					<h3>Who We Serve</h3>
+					<p>
+						We serve shoppers looking for quality local products and small business owners who want affordable digital exposure.
+					</p>
+					<h3>Our Impact Goal</h3>
+					<p>
+						We aim to grow community trade by helping sellers attract repeat customers, improve trust, and increase daily sales through consistent online visibility.
+					</p>
+				</article>
+				<aside class="highlights" aria-label="Business highlights">
+					<h3>Why choose us?</h3>
+					<ul>
+						<li>Trusted local vendors</li>
+						<li>Affordable listings for sellers</li>
+						<li>Fast customer inquiries</li>
+						<li>Community business support</li>
+						<li>Product-focused photo listings</li>
+						<li>Simple and mobile-first browsing</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
+		<section id="categories" class="section section-alt">
+			<div class="container">
+				<h2>Popular Categories</h2>
+				<p class="section-intro">Browse what customers frequently buy on Msika-Link.</p>
+				<div class="category-grid">
+					<article class="card">
+						<img src="images/cat-produce.png" alt="Assorted vegetables and fruits arranged for sale">
+						<h3>Fresh Produce</h3>
+						<p>Vegetables, fruits, and farm products from trusted local growers.</p>
+						<p><strong>Best for:</strong> Families, retailers, and healthy meal planners.</p>
+					</article>
+					<article class="card">
+						<img src="images/cat-fashion.png" alt="Market stand displaying fabrics and clothing">
+						<h3>Fashion & Textiles</h3>
+						<p>Affordable clothing, fabrics, and custom tailoring services.</p>
+						<p><strong>Best for:</strong> Events, uniforms, and custom-made outfits.</p>
+					</article>
+					<article class="card">
+						<img src="images/cat-home.png" alt="Household essentials and kitchen utensils on a table">
+						<h3>Home Essentials</h3>
+						<p>Kitchen items, cleaning products, and everyday household goods.</p>
+						<p><strong>Best for:</strong> Students, homes, and small rental spaces.</p>
+					</article>
+					<article class="card">
+						<img src="images/cat-tech.png" alt="Phone accessories and small gadgets displayed for buyers">
+						<h3>Electronics</h3>
+						<p>Phone accessories, repair services, and small electronic devices.</p>
+						<p><strong>Best for:</strong> Device users, students, and remote workers.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="services" class="section">
+			<div class="container">
+				<h2>Vendor Services</h2>
+				<p class="section-intro">These service options are rendered dynamically using JavaScript.</p>
+				<div id="services-list" class="category-grid"></div>
+				<noscript>
+					<p>Please enable JavaScript to view available vendor services.</p>
+				</noscript>
+			</div>
+		</section>
+
+		<section id="how-it-works" class="section">
+			<div class="container">
+				<h2>How Msika-Link Works</h2>
+				<p class="section-intro">A simple 3-step journey for both shoppers and vendors.</p>
+				<div class="process-grid">
+					<article class="card">
+						<h3>1. Discover</h3>
+						<p>Customers browse categories, featured products, and trusted vendor profiles across the marketplace.</p>
+					</article>
+					<article class="card">
+						<h3>2. Connect</h3>
+						<p>Interested buyers contact sellers directly by phone or WhatsApp for prices, stock, and pickup details.</p>
+					</article>
+					<article class="card">
+						<h3>3. Grow</h3>
+						<p>Vendors get repeat clients and better visibility, while shoppers save time finding reliable local products.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery" class="section">
+			<div class="container">
+				<h2>Marketplace in Pictures</h2>
+				<p class="section-intro">A visual look into daily trade and products on Msika-Link.</p>
+				<div class="photo-grid">
+					<figure>
+						<img src="images/gallery-1.png" alt="Trader arranging tomatoes in baskets">
+						<figcaption>Fresh arrivals every morning.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/gallery-2.png" alt="A customer selecting fabrics from a textile seller">
+						<figcaption>Affordable quality textiles.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/gallery-3.png" alt="Mobile accessories neatly displayed on a market stand">
+						<figcaption>Accessories for every phone.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/gallery-4.png" alt="Household goods and buckets placed in rows">
+						<figcaption>Daily essentials in one place.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/gallery-5.png" alt="Trader smiling while serving a customer at a food stall">
+						<figcaption>Friendly local service.</figcaption>
+					</figure>
+					<figure>
+						<img src="images/gallery-6.png" alt="Neatly packed spices and dry goods in transparent containers">
+						<figcaption>Authentic local spices.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section id="vendors" class="section">
+			<div class="container">
+				<h2>Featured Vendors</h2>
+				<p class="section-intro">Meet some of the trusted businesses currently active on Msika-Link.</p>
+				<div class="vendor-list">
+					<article class="vendor-card">
+						<img src="images/vendor-1.png" alt="Portrait of Mary, vendor of fresh foods">
+						<h3>Mary Fresh Foods</h3>
+						<p><strong>Specialty:</strong> Organic fruits and vegetables</p>
+						<p><strong>Location:</strong> City Main Market, Stall 21</p>
+						<p><strong>Known for:</strong> Same-day fresh stock and fair bulk prices.</p>
+					</article>
+					<article class="vendor-card">
+						<img src="images/vendor-2.png" alt="Portrait of fashion textile seller inside a market shop">
+						<h3>Trendy Fabrics</h3>
+						<p><strong>Specialty:</strong> Fabrics and ready-made outfits</p>
+						<p><strong>Location:</strong> East Wing Market, Stall 08</p>
+						<p><strong>Known for:</strong> Fast tailoring turn-around and durable materials.</p>
+					</article>
+					<article class="vendor-card">
+						<img src="images/vendor-3.png" alt="Portrait of tech accessories vendor in market kiosk">
+						<h3>QuickFix Tech</h3>
+						<p><strong>Specialty:</strong> Smartphone accessories and repairs</p>
+						<p><strong>Location:</strong> Central Arcade, Shop 14</p>
+						<p><strong>Known for:</strong> Affordable accessories and quick phone diagnostics.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="container trust-grid">
+				<article>
+					<h2>Why Buyers Trust Msika-Link</h2>
+					<p>
+						Trust matters in local trade. We highlight verified vendor profiles, clear product photos,
+						and direct communication channels so buyers know exactly who they are buying from.
+					</p>
+					<ul>
+						<li>Verified contact details for listed vendors</li>
+						<li>Transparent product descriptions and category tags</li>
+						<li>Mobile-friendly access for fast browsing anywhere</li>
+					</ul>
+				</article>
+				<article class="highlights" aria-label="Marketplace statistics">
+					<h3>Marketplace Snapshot</h3>
+					<ul>
+						<li>4+ core product categories</li>
+						<li>Dozens of local product listings</li>
+						<li>Growing network of trusted vendors</li>
+						<li>Fast buyer-to-seller communication</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<section id="faq" class="section">
+			<div class="container">
+				<h2>Frequently Asked Questions</h2>
+				<div class="faq-list">
+					<details>
+						<summary>How do I list my stall on Msika-Link?</summary>
+						<p>Contact us through phone, WhatsApp, or email with your business name, category, and sample product photos.</p>
+					</details>
+					<details>
+						<summary>Does Msika-Link handle online payments?</summary>
+						<p>Currently, buyers and sellers arrange payment and delivery terms directly to keep the process flexible and local.</p>
+					</details>
+					<details>
+						<summary>Can I advertise seasonal products?</summary>
+						<p>Yes. Vendors can update listings for seasonal stock, promotions, and limited-time offers to attract more customers.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section section-alt">
+			<div class="container contact-layout">
+				<article class="contact-intro-card">
+					<h2>Work With Msika-Link</h2>
+					<p>Ready to showcase your products and reach more customers in your area?</p>
+					<p>
+						Whether you are a new trader or an established seller, we can help you set up a clear,
+						attractive vendor profile that builds trust and drives more buyer calls.
+					</p>
+					<ul>
+						<li>Profile setup support for first-time sellers</li>
+						<li>Category placement for better product visibility</li>
+						<li>Guidance on photo quality and listing descriptions</li>
+					</ul>
+					<a class="btn" href="mailto:hello@msika-link.com">Request Vendor Onboarding</a>
+				</article>
+
+				<aside class="contact-info-grid" aria-label="Contact information">
+					<article class="contact-info-card">
+						<h3>Call or WhatsApp</h3>
+						<p><a href="tel:+265991234567">+265 991 234 567</a></p>
+						<small>Quickest way to discuss your listing requirements.</small>
+					</article>
+					<article class="contact-info-card">
+						<h3>Email</h3>
+						<p><a href="mailto:hello@msika-link.com">hello@msika-link.com</a></p>
+						<small>Send your business name, category, and sample images.</small>
+					</article>
+					<article class="contact-info-card">
+						<h3>Business Hours</h3>
+						<p>Monday - Saturday: 08:00 - 18:00</p>
+						<small>Sunday: Closed (messages still received online).</small>
+					</article>
+					<article class="contact-info-card">
+						<h3>Service Area</h3>
+						<p>Local markets and surrounding townships</p>
+						<small>Expanding weekly with new trusted vendors.</small>
+					</article>
+				</aside>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<div class="footer-grid">
+				<section class="footer-brand-block">
+					<h3>Msika-Link</h3>
+					<p>Empowering local trade through digital connection and helping small businesses grow with confidence.</p>
+					<p class="footer-tagline">Connect. Trade. Grow.</p>
+				</section>
+				<section>
+					<h3>Quick Links</h3>
+					<ul class="footer-links">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#categories">Categories</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#vendors">Vendors</a></li>
+						<li><a href="#faq">FAQ</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Contact Desk</h3>
+					<ul class="footer-links footer-contact-list">
+						<li><a href="tel:+265991234567">+265 991 234 567</a></li>
+						<li><a href="mailto:hello@msika-link.com">hello@msika-link.com</a></li>
+						<li>Mon - Sat: 08:00 - 18:00</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Website Partner</h3>
+					<p>
+						Built by Next-Link Solutions<br>
+						<a href="https://nextlinksolutions.co.ke" target="_blank" rel="noopener noreferrer">nextlinksolutionsw.co.ke</a>
+					</p>
+					<p class="footer-note">Professional web design for startups, SMEs, and local ventures.</p>
+				</section>
+			</div>
+			<p class="footer-copy">&copy; 2026 Msika-Link. All rights reserved.</p>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
