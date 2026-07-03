@@ -3,3 +3,9 @@ Feature 1 - Loop-rendered dynamic content:
 - Implemented JavaScript in js/script.js using an array of objects and forEach().
 - Each object includes a required "name" property and a "price" property.
 - Service cards are generated dynamically with createElement(), innerHTML, and appendChild().
+
+Feature 2 - Add & Remove items:
+- Added wishlist UI in index.html with required elements: input id="item", Add button, and ul id="wishlist".
+- Used createElement() to create li, span, and Remove button for each new item.
+- Used appendChild() to attach each element to the DOM.
+- Used remove() so each item's Remove button deletes that specific item.

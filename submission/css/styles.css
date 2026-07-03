@@ -307,6 +307,55 @@ img {
 	color: var(--muted);
 }
 
+.wishlist-controls {
+	display: flex;
+	gap: 0.7rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+#item {
+	flex: 1 1 16rem;
+	max-width: 28rem;
+	padding: 0.72rem 0.85rem;
+	border: 0.1rem solid var(--border);
+	border-radius: 0.6rem;
+	font: inherit;
+}
+
+.wishlist-list {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 0;
+	display: grid;
+	gap: 0.6rem;
+}
+
+.wishlist-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.8rem;
+	padding: 0.75rem 0.85rem;
+	background-color: var(--surface);
+	border: 0.1rem solid var(--border);
+	border-radius: 0.7rem;
+}
+
+.remove-btn {
+	border: 0;
+	background-color: #ef4444;
+	color: #fff;
+	font-weight: 700;
+	padding: 0.45rem 0.7rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.remove-btn:hover {
+	background-color: #dc2626;
+}
+
 .contact-layout {
 	display: grid;
 	grid-template-columns: 1.1fr 1fr;
