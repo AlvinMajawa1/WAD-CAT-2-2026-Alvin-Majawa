@@ -81,3 +81,34 @@ if (itemInput) {
 		}
 	});
 }
+
+const contactForm = document.getElementById("contact-form");
+const nameField = document.getElementById("contact-name");
+const emailField = document.getElementById("contact-email");
+const formFeedback = document.getElementById("form-feedback");
+
+if (contactForm && nameField && emailField && formFeedback) {
+	contactForm.addEventListener("submit", (event) => {
+		event.preventDefault();
+
+		const customerName = nameField.value.trim();
+		const customerEmail = emailField.value.trim();
+		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+		if (!customerName) {
+			formFeedback.textContent = "Please enter your name.";
+			formFeedback.style.color = "#b91c1c";
+			return;
+		}
+
+		if (!emailPattern.test(customerEmail)) {
+			formFeedback.textContent = "Email is invalid.";
+			formFeedback.style.color = "#b91c1c";
+			return;
+		}
+
+		formFeedback.textContent = `Thank you ${customerName}. We'll contact you shortly.`;
+		formFeedback.style.color = "#166534";
+		contactForm.reset();
+	});
+}

@@ -9,3 +9,11 @@ Feature 2 - Add & Remove items:
 - Used createElement() to create li, span, and Remove button for each new item.
 - Used appendChild() to attach each element to the DOM.
 - Used remove() so each item's Remove button deletes that specific item.
+
+Feature 3 - Form validation:
+- Added a contact form with name and email inputs plus a feedback paragraph.
+- Used event.preventDefault() on form submit to handle validation in JavaScript.
+- Read user input using .value from name and email fields.
+- Displayed dynamic feedback with textContent:
+	- Success: "Thank you [Name]. We'll contact you shortly."
+	- Invalid email: "Email is invalid."
